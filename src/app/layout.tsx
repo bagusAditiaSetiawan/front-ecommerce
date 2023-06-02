@@ -1,3 +1,5 @@
+import MainNavbar from './components/navigations/main-navbar'
+import FooterSection from './components/sections/footer.section'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -15,7 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>        
+      <MainNavbar />
+      {children}
+      <FooterSection />
+      </body>
     </html>
   )
 }
